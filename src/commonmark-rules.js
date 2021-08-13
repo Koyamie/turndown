@@ -249,11 +249,11 @@ rules.image = {
   filter: 'img',
 
   replacement: function (content, node) {
-    var alt = cleanAttribute(node.getAttribute('alt'))
+    var alt = cleanAttribute(node.getAttribute('alt')) ?? 'Image'
     var src = node.getAttribute('src') || ''
     var title = cleanAttribute(node.getAttribute('title'))
     var titlePart = title ? ' "' + title + '"' : ''
-    return src ? '[' + alt || 'Image' + ']' + '(' + src + titlePart + ')' : ''
+    return src ? '[' + alt + ']' + '(' + src + titlePart + ')' : ''
   }
 }
 
