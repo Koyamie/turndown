@@ -250,7 +250,6 @@ rules.image = {
 
   replacement: function (content, node) {
     var alt = cleanAttribute(node.getAttribute('alt'))
-    if (!alt.length) alt = 'Image'
     var src = node.getAttribute('src') || ''
     var title = cleanAttribute(node.getAttribute('title'))
     var titlePart = title ? ' "' + title + '"' : ''
