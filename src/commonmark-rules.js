@@ -253,7 +253,7 @@ rules.image = {
     var src = node.getAttribute('src') || ''
     var title = cleanAttribute(node.getAttribute('title'))
     var titlePart = title ? ' "' + title + '"' : ''
-    return src ? '![' + alt + ']' + '(' + src + titlePart + ')' : ''
+    return src ? '[' + alt || 'Image' + ']' + '(' + src + titlePart + ')' : ''
   }
 }
 
